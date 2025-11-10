@@ -1,1 +1,1 @@
-rootProject.name = "Test1243234"
+rootProject.name = "ossim"
