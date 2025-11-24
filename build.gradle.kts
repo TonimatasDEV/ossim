@@ -14,6 +14,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("org.jdom:jdom:1.1.3")
+    implementation("com.formdev:flatlaf:3.6.2")
 }
 
 tasks.test {

@@ -1,5 +1,7 @@
 package edu.upc.fib.ossim;
 
+import com.formdev.flatlaf.FlatDarkLaf;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -27,8 +29,8 @@ public class OSSimFrame extends JFrame implements OSSim {
      * @param args unused
      */
     public static void main(String[] args) {
-        @SuppressWarnings("unused")
-        OSSimFrame mainFrame = new OSSimFrame();
+        FlatDarkLaf.setup();
+        SwingUtilities.invokeLater(OSSimFrame::new);
     }
 
     private void initialize() {
