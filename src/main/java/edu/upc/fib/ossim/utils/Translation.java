@@ -70,7 +70,7 @@ public class Translation {
      * replace "p2" with label identified by keyparam2
      *
      * @param key       label's key
-     * @param keyparam1 first param's
+     * @param param1 first param's
      * @param keyparam2 second param's label key
      * @return return 	label associated to the key replacing p1 with param1 and p2  with label associated to keyparam2
      */

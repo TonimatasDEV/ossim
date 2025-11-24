@@ -47,7 +47,6 @@ public class Menu extends JMenuBar implements ActionListener, Observer {
 
     private JLabel lang;
     private JButton ben;
-    private JButton bca;
     private JButton bes;
 
     private JMenuItem exitMenuItem = null;
@@ -97,7 +96,6 @@ public class Menu extends JMenuBar implements ActionListener, Observer {
         actions.put("about", 5);
         actions.put("help", 6);
         actions.put("en", 10);
-        actions.put("ca", 11);
         actions.put("es", 12);
         actions.put("sch", 20);
         actions.put("mngc", 30);
@@ -313,13 +311,6 @@ public class Menu extends JMenuBar implements ActionListener, Observer {
         ben.setVisible(false);
         this.add(new JLabel(" "));
 
-        bca = new JButton(Functions.getInstance().createImageIcon("ca.gif"));
-        bca.setPreferredSize(new Dimension(22, 15));
-        bca.setActionCommand("ca");
-        bca.addActionListener(this);
-        this.add(bca);
-        this.add(new JLabel(" "));
-
         bes = new JButton(Functions.getInstance().createImageIcon("es.gif"));
         bes.setPreferredSize(new Dimension(22, 15));
         bes.setActionCommand("es");
@@ -390,7 +381,6 @@ public class Menu extends JMenuBar implements ActionListener, Observer {
                 case 11:    // ca
                 case 12:    // es
                     ben.setVisible(action != 10);
-                    bca.setVisible(action != 11);
                     bes.setVisible(action != 12);
 
                     AppSession.getInstance().setIdioma(new Locale(e.getActionCommand()));
