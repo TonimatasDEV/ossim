@@ -36,7 +36,8 @@ public class OSSimFrame extends JFrame implements OSSim {
     private void initialize() {
         this.setTitle("OS Sim");
         this.setSize(800, 600); //Mida 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         this.setResizable(false);
         AppSession.getInstance().setApp(this);
         Menu menu = new Menu();
