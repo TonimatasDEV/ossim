@@ -1,5 +1,7 @@
 plugins {
     java
+    application
+    id("com.gradleup.shadow") version "9.2.2"
 }
 
 group = "edu.upc"
@@ -19,4 +21,20 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+application {
+    mainClass.set("edu.upc.fib.ossim.OSSimFrame")
+}
+
+tasks.jar {
+    dependsOn("shadowJar")
+    archiveClassifier.set("plain")
+}
+
+tasks.shadowJar {
+    archiveClassifier.set("")
+    manifest {
+        attributes("Main-Class" to "edu.upc.fib.ossim.OSSimFrame")
+    }
 }
