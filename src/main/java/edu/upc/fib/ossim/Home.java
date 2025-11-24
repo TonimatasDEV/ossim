@@ -30,7 +30,6 @@ public class Home extends JPanel implements Observer {
      * @param menu application menu
      */
     public Home(Menu menu) {
-        super();
         this.menu = menu;
         AppSession.getInstance().getLangNotifier().addObserver(this);
         initLayout();
@@ -42,7 +41,6 @@ public class Home extends JPanel implements Observer {
 
         // Buttons
         JPanel grid = new JPanel(new SpringLayout());
-        grid.setBackground(Color.WHITE);
         scheduler = new JButton(Functions.getInstance().createImageIcon("cpu.png"));
         scheduler.setToolTipText(Translation.getInstance().getLabel("all_53"));
         scheduler.setActionCommand("sch");
