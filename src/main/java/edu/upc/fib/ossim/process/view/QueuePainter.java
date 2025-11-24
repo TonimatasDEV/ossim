@@ -62,10 +62,11 @@ public class QueuePainter extends PainterTemplate {
      */
     public void paint(Graphics g) {
         g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         Dimension size = getSize();
         int w = (int) size.getWidth();
         int h = (int) size.getHeight();
-        g2.setPaint(Color.white);
+        g2.setPaint(Color.gray);
         g2.fillRect(0, 0, w, h);
 
         map.clear();
@@ -77,14 +78,14 @@ public class QueuePainter extends PainterTemplate {
 
         // background
         //g2.setPaint(bg);
-        g2.setColor(Color.WHITE);
+        g2.setColor(Color.GRAY);
         g2.fillRect(2, 2, w - 2, h - 2);
         g2.setColor(Color.BLACK);
         g2.drawRect(0, 0, w, h);
 
         // Draw ready queue
         g2.setFont(new Font(Font.MONOSPACED, Font.BOLD, 12));
-        g2.setColor(Color.GRAY);
+        g2.setColor(Color.BLACK);
         g2.drawString(Translation.getInstance().getLabel(keytitle), w / 2 - 30, 20);
 
 

@@ -51,6 +51,7 @@ public class MemoryPainter extends PainterTemplate {
      */
     public void paint(Graphics g) {
         g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         Dimension size = getSize();
         int w = (int) size.getWidth();
         int h = (int) size.getHeight();
@@ -69,7 +70,7 @@ public class MemoryPainter extends PainterTemplate {
         //}
 
 
-        g2.setColor(Color.LIGHT_GRAY);
+        g2.setColor(Color.BLACK);
         g2.setFont(new Font(Font.MONOSPACED, Font.BOLD, 12));
         String s = Translation.getInstance().getLabel("me_03");
         FontRenderContext frc = g2.getFontRenderContext();
@@ -140,7 +141,7 @@ public class MemoryPainter extends PainterTemplate {
                 s += "...)";
                 bounds = g2.getFont().getStringBounds(s, frc);
             }
-            g2.setColor(Color.GRAY);
+            g2.setColor(Color.BLACK);
             g2.drawString(s, xText, yText);
             yText += bounds.getHeight();
         }

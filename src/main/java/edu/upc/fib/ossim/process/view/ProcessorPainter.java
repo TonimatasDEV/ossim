@@ -41,10 +41,11 @@ public class ProcessorPainter extends PainterTemplate {
      */
     public void paint(Graphics g) {
         g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         Dimension size = getSize();
         int w = (int) size.getWidth();
         int h = (int) size.getHeight();
-        g2.setPaint(Color.white);
+        g2.setPaint(Color.gray);
         g2.fillRect(0, 0, w, h);
 
         // Process in processor 
@@ -62,13 +63,13 @@ public class ProcessorPainter extends PainterTemplate {
         int h_proc = h - 4 * offset;
 
         // background
-        g2.setColor(Color.WHITE);
+        g2.setColor(Color.GRAY);
         g2.fillRect(2, 2, w - 2, h - 2);
         g2.setColor(Color.BLACK);
         g2.drawRect(0, 0, w - 1, h - 1);
 
         g2.setFont(new Font(Font.MONOSPACED, Font.BOLD, 14));
-        g2.setColor(Color.GRAY);
+        g2.setColor(Color.BLACK);
         g2.drawString(proc, offset, h / 2);
 
         g2.drawRect(x_proc, y_proc, w_proc, h_proc);
