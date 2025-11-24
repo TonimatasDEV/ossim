@@ -208,7 +208,7 @@ public abstract class MemStrategyAdapterCONT implements MemStrategy {
      * @param d unused
      *
      */
-    public void addProcessComponents(ProcessComplete p, Vector<Vector<Object>> d) {
+    public void addProcessComponents(ProcessComplete p, Vector<Vector> d) {
         // Do nothing
     }
 

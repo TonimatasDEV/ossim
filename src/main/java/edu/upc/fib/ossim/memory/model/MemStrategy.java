@@ -126,7 +126,7 @@ public interface MemStrategy {
      * @param p process
      * @param d components data
      */
-    void addProcessComponents(ProcessComplete p, Vector<Vector<Object>> d);
+    void addProcessComponents(ProcessComplete p, Vector<Vector> d);
 
     /**
      * Removes a process from memory, in non contiguous memory management strategies, also remove all other process components

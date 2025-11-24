@@ -298,7 +298,7 @@ public class MemoryPresenter extends Presenter {
         String blockTitle = "";
         Vector<Object> values;
         Vector<Object> d = null;
-        Vector<Vector<Object>> c;
+        Vector<Vector> c;
         int action = actions.get(actionCommand).intValue();
 
         switch (action) {
@@ -895,7 +895,7 @@ public class MemoryPresenter extends Presenter {
                         programData.add(new Color(Integer.valueOf(program.get(4).get(1)))); // color. Value at position 1 (RGB value)
 
                         if (program.size() > 5) { // Components
-                            Vector<Vector<Object>> components = new Vector<Vector<Object>>();
+                            Vector<Vector> components = new Vector<>();
 
                             int num = (program.size() - 5) / 3; // bid, size, load?
                             if ((program.size() - 5) % 3 != 0) throw new SoSimException("all_04");

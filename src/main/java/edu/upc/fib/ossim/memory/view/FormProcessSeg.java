@@ -85,7 +85,7 @@ public class FormProcessSeg extends FormProcess {
         int totalSize = 0;
         int segSize = 0;
         @SuppressWarnings("unchecked")
-        Vector<Vector<Object>> data = tablemodel.getDataVector();
+        Vector<Vector> data = tablemodel.getDataVector();
         for (int i = 0; i < data.size(); i++) {
             Vector<Object> segment = data.get(i);
             segSize = (Integer) segment.get(1);
@@ -110,7 +110,7 @@ public class FormProcessSeg extends FormProcess {
      * @return form pages data
      */
     @SuppressWarnings("unchecked")
-    public Vector<Vector<Object>> getComponentsData() {
+    public Vector<Vector> getComponentsData() {
         // Program blocks data.
         return tablemodel.getDataVector();
     }

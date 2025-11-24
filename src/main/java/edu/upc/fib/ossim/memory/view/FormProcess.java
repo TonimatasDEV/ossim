@@ -154,7 +154,7 @@ public class FormProcess extends FormTemplate {
      * @see FormProcessPag
      * @see FormProcessSeg
      */
-    public Vector<Vector<Object>> getComponentsData() {
+    public Vector<Vector> getComponentsData() {
         return null;
     }
 } 

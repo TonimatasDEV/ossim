@@ -118,7 +118,7 @@ public class FormProcessPag extends FormProcess {
      * @return form pages data
      */
     @SuppressWarnings("unchecked")
-    public Vector<Vector<Object>> getComponentsData() {
+    public Vector<Vector> getComponentsData() {
         // Program blocks data.
         return tablemodel.getDataVector();
     }

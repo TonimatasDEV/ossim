@@ -618,7 +618,7 @@ public class ContextMemory {
      * @param components in pagination, pages data, in segmentation, segments data
      * @see MemStrategy#addProcessComponents(ProcessComplete, Vector, int)
      */
-    public void addProgram(Vector<Object> data, Vector<Vector<Object>> components) {
+    public void addProgram(Vector<Object> data, Vector<Vector> components) {
         // Add Program p to program's queue 
         ProcessComplete p = new ProcessComplete(Integer.valueOf((String) data.get(0)), (String) data.get(1), (Integer) data.get(2), (Integer) data.get(3), (Color) data.get(4));
         processQueue.add(p);

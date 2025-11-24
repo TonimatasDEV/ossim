@@ -255,7 +255,7 @@ public class MemStrategyPAG extends MemStrategyAdapterNOCONT {
      * @param p process
      * @param d pages data
      */
-    public void addProcessComponents(ProcessComplete p, Vector<Vector<Object>> d) {
+    public void addProcessComponents(ProcessComplete p, Vector<Vector> d) {
         for (int i = 0; i < d.size() - 1; i++) {
             Vector<Object> data = d.elementAt(i);
             ProcessComponent pc = new ProcessPage(p, (Integer) data.elementAt(0), pageSize, (Boolean) data.elementAt(2));

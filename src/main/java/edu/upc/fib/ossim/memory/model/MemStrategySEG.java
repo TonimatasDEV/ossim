@@ -245,7 +245,7 @@ public class MemStrategySEG extends MemStrategyAdapterNOCONT {
      * @param p process
      * @param d segments data
      */
-    public void addProcessComponents(ProcessComplete p, Vector<Vector<Object>> d) {
+    public void addProcessComponents(ProcessComplete p, Vector<Vector> d) {
         for (int i = 0; i < d.size(); i++) {
             Vector<Object> data = d.elementAt(i);
             ProcessComponent pc = new ProcessSegment(p, i, (Integer) data.elementAt(1), (Boolean) data.elementAt(2));
